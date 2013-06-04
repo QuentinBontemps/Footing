@@ -18,7 +18,7 @@
 		843511B4171E95AA00F2E874 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 843511B3171E95AA00F2E874 /* Default.png */; };
 		843511B6171E95AA00F2E874 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843511B5171E95AA00F2E874 /* Default@2x.png */; };
 		843511B8171E95AA00F2E874 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843511B7171E95AA00F2E874 /* Default-568h@2x.png */; };
-		843511BB171E95AA00F2E874 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843511B9171E95AA00F2E874 /* MainStoryboard.storyboard */; };
+		843511BB171E95AA00F2E874 /* MainStoryboardO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843511B9171E95AA00F2E874 /* MainStoryboardO.storyboard */; };
 		843511BE171E95AA00F2E874 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843511BD171E95AA00F2E874 /* ViewController.m */; };
 		843511CD171EAD6D00F2E874 /* ListeTrajetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843511CC171EAD6D00F2E874 /* ListeTrajetsViewController.m */; };
 		843511DC171EB73000F2E874 /* Trajet.m in Sources */ = {isa = PBXBuildFile; fileRef = 843511DB171EB73000F2E874 /* Trajet.m */; };
@@ -28,6 +28,7 @@
 		8446BE7A173821C2000007FB /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8446BE79173821C2000007FB /* Configuration.m */; };
 		8446BE7D17382428000007FB /* GestionFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8446BE7C17382428000007FB /* GestionFile.m */; };
 		845B6367174A657800CFDEA7 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B6366174A657800CFDEA7 /* Tools.m */; };
+		848C7DB1175E7FC9001D5361 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848C7DAF175E7FC9001D5361 /* MainStoryboard.storyboard */; };
 		84955818175646D700A4880A /* StatsTrajetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84955817175646D700A4880A /* StatsTrajetViewController.m */; };
 		84B508801756A350009B0EF5 /* StatsTrajetTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B5087F1756A350009B0EF5 /* StatsTrajetTabViewController.m */; };
 		84B508871756A657009B0EF5 /* GraphsTrajetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B508861756A657009B0EF5 /* GraphsTrajetViewController.m */; };
@@ -62,7 +63,7 @@
 		843511B3171E95AA00F2E874 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		843511B5171E95AA00F2E874 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		843511B7171E95AA00F2E874 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		843511BA171E95AA00F2E874 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		843511BA171E95AA00F2E874 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboardO.storyboard; sourceTree = "<group>"; };
 		843511BC171E95AA00F2E874 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Footing/ViewController.h; sourceTree = "<group>"; };
 		843511BD171E95AA00F2E874 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Footing/ViewController.m; sourceTree = "<group>"; };
 		843511CB171EAD6D00F2E874 /* ListeTrajetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListeTrajetsViewController.h; path = Footing/ListeTrajetsViewController.h; sourceTree = "<group>"; };
@@ -84,6 +85,7 @@
 		845B6366174A657800CFDEA7 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		84850ADB174A7277002D4070 /* Deplacement.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Deplacement.gpx; sourceTree = "<group>"; };
 		84850ADC174A761B002D4070 /* Laval.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Laval.gpx; sourceTree = "<group>"; };
+		848C7DB0175E7FC9001D5361 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		84955816175646D700A4880A /* StatsTrajetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTrajetViewController.h; sourceTree = "<group>"; };
 		84955817175646D700A4880A /* StatsTrajetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTrajetViewController.m; sourceTree = "<group>"; };
 		84B5087E1756A350009B0EF5 /* StatsTrajetTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTrajetTabViewController.h; sourceTree = "<group>"; };
@@ -170,7 +172,8 @@
 				843511CA171EA52800F2E874 /* ViewController */,
 				843511B0171E95AA00F2E874 /* AppDelegate.h */,
 				843511B1171E95AA00F2E874 /* AppDelegate.m */,
-				843511B9171E95AA00F2E874 /* MainStoryboard.storyboard */,
+				848C7DAF175E7FC9001D5361 /* MainStoryboard.storyboard */,
+				843511B9171E95AA00F2E874 /* MainStoryboardO.storyboard */,
 				843511A8171E95AA00F2E874 /* Supporting Files */,
 			);
 			path = Footing;
@@ -320,9 +323,10 @@
 				843511B4171E95AA00F2E874 /* Default.png in Resources */,
 				843511B6171E95AA00F2E874 /* Default@2x.png in Resources */,
 				843511B8171E95AA00F2E874 /* Default-568h@2x.png in Resources */,
-				843511BB171E95AA00F2E874 /* MainStoryboard.storyboard in Resources */,
+				843511BB171E95AA00F2E874 /* MainStoryboardO.storyboard in Resources */,
 				843169971754050C00C5835A /* compass_needle.png in Resources */,
 				84E14314175751FD0038CD8F /* DetailTrajetViewController.xib in Resources */,
+				848C7DB1175E7FC9001D5361 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,10 +375,18 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		843511B9171E95AA00F2E874 /* MainStoryboard.storyboard */ = {
+		843511B9171E95AA00F2E874 /* MainStoryboardO.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				843511BA171E95AA00F2E874 /* en */,
+			);
+			name = MainStoryboardO.storyboard;
+			sourceTree = "<group>";
+		};
+		848C7DAF175E7FC9001D5361 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				848C7DB0175E7FC9001D5361 /* en */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";

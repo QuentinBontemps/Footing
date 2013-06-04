@@ -527,6 +527,7 @@
             trajet= nil;
         }
     }
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
