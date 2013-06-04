@@ -141,7 +141,7 @@
     }else if(indexPath.section == 1){
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
         cell.textLabel.text = @"Voir le trajet sur la carte";
-        cell.textLabel.font = [UIFont boldSystemFontOfSize:16];
+        cell.textLabel.font = [UIFont boldSystemFontOfSize:17];
         cell.userInteractionEnabled = YES;
         cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     }else if(indexPath.section == 2){
@@ -152,7 +152,7 @@
         
         cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
         cell.textLabel.text = [Tools dateToFullString:t.dateTrajet];
-        cell.textLabel.font = [UIFont boldSystemFontOfSize:16];
+        cell.textLabel.font = [UIFont boldSystemFontOfSize:17];
         cell.detailTextLabel.text = [Tools meterToString:t.distance.integerValue];
         cell.userInteractionEnabled = YES;
     }
