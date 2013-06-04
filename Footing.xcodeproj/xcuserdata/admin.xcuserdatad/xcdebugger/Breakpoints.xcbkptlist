@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MapViewController.m"
-         timestampString = "391601771.777462"
+         timestampString = "392072345.469042"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "222"
-         endingLineNumber = "222"
+         startingLineNumber = "219"
+         endingLineNumber = "219"
          landmarkName = "-btnStartStopOnClick:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MapViewController.m"
-         timestampString = "391601771.777462"
+         timestampString = "392072831.374222"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "427"
-         endingLineNumber = "427"
+         startingLineNumber = "458"
+         endingLineNumber = "458"
          landmarkName = "-tracerTrajet:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MapViewController.m"
-         timestampString = "391601771.777462"
+         timestampString = "392072831.374222"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "410"
-         endingLineNumber = "410"
+         startingLineNumber = "441"
+         endingLineNumber = "441"
          landmarkName = "-calculDistance:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,24 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MapViewController.m"
-         timestampString = "391601771.777462"
+         timestampString = "392072831.374222"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "316"
-         endingLineNumber = "316"
-         landmarkName = "-createTrajet"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "MapViewController.m"
-         timestampString = "391601771.777462"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "497"
-         endingLineNumber = "497"
+         startingLineNumber = "508"
+         endingLineNumber = "508"
          landmarkName = "-showNbTours"
          landmarkType = "5">
       </FileBreakpoint>

@@ -43,4 +43,6 @@
 -(void)addTrajet:(Trajet *)toTrajet addTrajet:(Trajet *)addTrajet;
 -(void)removeTrajet:(Trajet *)toTrajet removeTrajet:(Trajet *)removeTrajet;
 
+-(BOOL)trajetNameExist:(NSString *)name;
+
 @end

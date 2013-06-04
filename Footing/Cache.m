@@ -216,6 +216,22 @@ static Cache *_instance = nil;
     [[(Circuit *)[circuitsStore objectAtIndex:circuitSelected] trajets] addObject:addCircuit];
 }
 
-
+-(BOOL)trajetNameExist:(NSString *)name
+{
+    for (Circuit *circuit in [self getCircuits]) {
+        if([circuit.nom isEqualToString:name])
+        {
+            return YES;
+        }
+    }
+    
+    for (Parcours *parcours in [self getParcours]) {
+        if([parcours.nom isEqualToString:name]){
+            return YES;
+        }
+    }
+    
+    return NO;
+}
 
 @end

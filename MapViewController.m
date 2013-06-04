@@ -213,17 +213,11 @@
         if(!pauseTrajet){
             [self createTrajet];
         }else{
-            timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(affichageInfos) userInfo:nil repeats:YES];
+            [self pauseTrajet];
         }
-        btnState = false;
-        [btnStartStop setTitle:@"STOP" forState:UIControlStateNormal];
-        pauseTrajet = false;
-        [btnPause setEnabled:YES];
+       
     }else{
         [self stopTrajet];
-        btnState = true;
-        [btnStartStop setTitle:@"START" forState:UIControlStateNormal];
-        [btnPause setEnabled:NO];
     }
  }
 
@@ -231,13 +225,7 @@
 {
     NSLog(@"Pause Trajet");
     
-    if(!pauseTrajet){
-        [timer invalidate];
-        [btnPause setEnabled:NO];
-        [btnStartStop setTitle:@"START" forState:UIControlStateNormal];
-        pauseTrajet = true;
-        btnState = true;
-    }
+    [self pauseTrajet];
 }
 
 
@@ -282,59 +270,97 @@
 -(void)createTrajet
 {
     NSLog(@"CreateTrajet");
-    NSDate *date = [NSDate new];
-   
     
-    switch (typeTrajet.integerValue) {
-        case CIRCUITS_STORE:
-            trajet = [[Circuit alloc]init];
-            getTours = false;
-            getCheckpointTours = false;
-            break;
-            
-        case PARCOURS_STORE:
-            trajet = [[Parcours alloc]init];
-            break;
-            
-        case ANCIEN_PARCOURS:
-            if(oldTrajet != nil){
-                if([oldTrajet isKindOfClass:[Parcours class]]){
-                    trajet = [[Parcours alloc]init];
-                }else{
-                    trajet = [[Circuit alloc]init];
-                }
-            }
-            break;
-            
-        default:
-            trajet = [[Parcours alloc]init];
-            break;
-    }
-    [trajet setDateTrajet:date];
-
-    Etape *firstEtape = [[Etape alloc] initWithLatitude:[NSNumber numberWithDouble:mapView.userLocation.coordinate.latitude] longitude:[NSNumber numberWithDouble:mapView.userLocation.coordinate.longitude]];
-    
-
-    
-    [trajet setDepart:firstEtape];
-    [[trajet trajetReel]addObject:firstEtape];
-    
-    MapPin *checkpoint = [[MapPin alloc]initWithCoordinates:mapView.userLocation.coordinate placeName:@"Checkpoint" description:@"Départ"];
-    
-    [checkpoint setIsDepart:[NSNumber numberWithBool:YES]];
-    
-    nbCheckpoints++;
+    BOOL isOk = true;
     
     if(oldTrajet != nil){
-        if([mapView.userLocation.location distanceFromLocation:[(MapPin *)[oldTrajet.checkpoints objectAtIndex:nbCheckpointsOk] location]] <= 5){
-            NSLog(@"checkpoint départ %i OK",nbCheckpointsOk);
-            nbCheckpointsOk++;
+        CLLocation *oldTrajetDepart = [[CLLocation alloc]initWithLatitude:oldTrajet.depart.latitude.floatValue longitude:oldTrajet.depart.longitude.floatValue];
+        if([mapView.userLocation.location distanceFromLocation:oldTrajetDepart] <= 5){
+            nbCheckpointsOk ++;
+        }else{
+            isOk = false;
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Erreur" message:@"Vous devez être à moins de 5 mètres du point de départ de l'ancien trajet pour pouvoir le démarrer" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+            [alert show];
         }
     }
     
-    [[trajet checkpoints]addObject:checkpoint];
-    
-    timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(affichageInfos) userInfo:nil repeats:YES];
+    if(isOk){
+        NSDate *date = [NSDate new];
+        
+        switch (typeTrajet.integerValue) {
+            case CIRCUITS_STORE:
+                trajet = [[Circuit alloc]init];
+                getTours = false;
+                getCheckpointTours = false;
+                break;
+                
+            case PARCOURS_STORE:
+                trajet = [[Parcours alloc]init];
+                break;
+                
+            case ANCIEN_PARCOURS:
+                if(oldTrajet != nil){
+                    if([oldTrajet isKindOfClass:[Parcours class]]){
+                        trajet = [[Parcours alloc]init];
+                    }else{
+                        trajet = [[Circuit alloc]init];
+                    }
+                }
+                break;
+                
+            default:
+                trajet = [[Parcours alloc]init];
+                break;
+        }
+               
+        
+        [trajet setDateTrajet:date];
+        
+        Etape *firstEtape = [[Etape alloc] initWithLatitude:[NSNumber numberWithDouble:mapView.userLocation.coordinate.latitude] longitude:[NSNumber numberWithDouble:mapView.userLocation.coordinate.longitude]];
+        
+        
+        
+        [trajet setDepart:firstEtape];
+        [[trajet trajetReel]addObject:firstEtape];
+        
+        MapPin *checkpoint = [[MapPin alloc]initWithCoordinates:mapView.userLocation.coordinate placeName:@"Checkpoint" description:@"Départ"];
+        
+        [checkpoint setIsDepart:[NSNumber numberWithBool:YES]];
+        
+        nbCheckpoints++;
+           
+        [[trajet checkpoints]addObject:checkpoint];
+        
+        timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(affichageInfos) userInfo:nil repeats:YES];
+        
+        btnState = false;
+        [btnStartStop setTitle:@"STOP" forState:UIControlStateNormal];
+        [btnPause setEnabled:YES];
+    }
+}
+
+-(void)pauseTrajet
+{
+    if(!pauseTrajet){
+        [timer invalidate];
+        [btnPause setEnabled:NO];
+        [btnStartStop setTitle:@"START" forState:UIControlStateNormal];
+        pausePointLocation = [[CLLocation alloc]initWithLatitude:mapView.userLocation.coordinate.latitude longitude:mapView.userLocation.coordinate.longitude];
+        pauseTrajet = true;
+        btnState = true;
+    }else{
+        if([mapView.userLocation.location distanceFromLocation:pausePointLocation] <= 5){
+                
+            timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(affichageInfos) userInfo:nil repeats:YES];
+            pauseTrajet = false;
+            btnState = false;
+            [btnStartStop setTitle:@"STOP" forState:UIControlStateNormal];
+            [btnPause setEnabled:YES];
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Erreur" message:@"Vous devez être à moins de 5 mètres de l'endroit ou vous avez mis en pause le trajet, pour pouvoir le continuer" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }
 }
 
 -(void)stopTrajet
@@ -353,6 +379,11 @@
     NSLog(@"Distance : %@", trajet.distance);
     
     [trajet setIsUpdatable:[NSNumber numberWithBool:NO]];
+    
+    
+    btnState = true;
+    [btnStartStop setTitle:@"START" forState:UIControlStateNormal];
+    [btnPause setEnabled:NO];
     
     if(typeTrajet.integerValue != ANCIEN_PARCOURS){
         
@@ -452,26 +483,6 @@
         //Affichage du temps écoulé
         lblTempsEcoule.text = [Tools secondToString:trajet.tempsTrajet.integerValue];
         
-       /*  //Affichage vitesse
-        int heure = 3600;
-                
-        float distance = 0;
-        
-        if(trajet.trajetReel.count > 2){
-            Etape *e1 = (Etape *)[trajet.trajetReel objectAtIndex:trajet.trajetReel.count -1];
-            Etape *e2 = (Etape *)[trajet.trajetReel objectAtIndex:trajet.trajetReel.count -2];
-            distance = [e1.getLocation distanceFromLocation:e2.getLocation];
-        }
-  
-        //Calcul de la distance en mètre pour une heure
-        float vitesse = distance * heure;
-        //Valeur mis en kilomètre
-        vitesse = vitesse / 1000;
-        vitesse = roundf(vitesse *100) / 100;
-        
-        lblVitesse.text = [NSString stringWithFormat:@"%.2f KM/H",vitesse];
-        */
-                
         //Affichage de la distance
         NSNumber *distance = [self calculDistance:trajet.trajetReel];
       
@@ -520,14 +531,39 @@
         [trajet setNom:[Tools dateToFullString:trajet.dateTrajet]];
         [cache store:trajet];
         trajet= nil;
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }else{
         if(![txtNameAlert.text isEqualToString:@""]){
-            [trajet setNom:txtNameAlert.text];
+            if(![cache trajetNameExist:txtNameAlert.text]){
+                [trajet setNom:txtNameAlert.text];
+                [cache store:trajet];
+                trajet= nil;
+            }else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Nouveau trajet"
+                                                                message:@"Le nom saisie existe déjà"
+                                                               delegate:self  cancelButtonTitle:@"Annuler"
+                                                      otherButtonTitles:@"OK", nil];
+                
+                
+                [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+                
+                // Customise name field
+                txtNameAlert = [alert textFieldAtIndex:0];
+                txtNameAlert.placeholder = @"Nom du trajet";
+                txtNameAlert.clearButtonMode = UITextFieldViewModeWhileEditing;
+                txtNameAlert.keyboardType = UIKeyboardTypeAlphabet;
+                txtNameAlert.keyboardAppearance = UIKeyboardAppearanceAlert;
+                
+                [alert show];
+
+            }
+        }else{
+            [trajet setNom:[Tools dateToFullString:trajet.dateTrajet]];
             [cache store:trajet];
             trajet= nil;
+            [self.navigationController popToRootViewControllerAnimated:YES];
         }
-    }
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    }    
 }
 
 @end

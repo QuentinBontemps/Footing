@@ -37,6 +37,8 @@
     int tempsTours;
     
     UITextField* txtNameAlert;
+    
+    CLLocation *pausePointLocation;
 }
 
 @property (strong, nonatomic) Trajet *trajet;
