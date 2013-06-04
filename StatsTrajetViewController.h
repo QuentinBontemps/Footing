@@ -13,6 +13,7 @@
 #import "Circuit.h"
 #import "Tools.h"
 #import "Cache.h"
+#import "Constant.h"
 
 @interface StatsTrajetViewController : UITableViewController
 {
@@ -21,6 +22,7 @@
     Cache *cache;
 }
 
-@property (nonatomic,strong) Trajet *trajet;
+@property (nonatomic, strong) Trajet *trajet;
+@property (nonatomic, strong) NSNumber *isDetails;
 
 @end

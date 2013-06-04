@@ -8,9 +8,10 @@
 
 #import "StatsTrajetViewController.h"
 #import "DetailTrajetViewController.h"
+#import "MapViewController.h"
 
 @implementation StatsTrajetViewController
-@synthesize trajet;
+@synthesize trajet, isDetails;
 
 - (void)viewDidLoad
 {
@@ -107,26 +108,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0) {
        return [infosGlobalesTrajet count];
-    }else{
+    }else if(section == 2){
         return trajets.count;
     }
+    return 1;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
         return @"Informations globales";
-    }else{
+    }else if(section == 1){
+        return @"Map";
+    }else if (section == 2){
         return @"Tous les trajets réalisés";
     }
+    return nil;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -139,11 +143,17 @@
         cell.textLabel.text = [(StatItem *)[infosGlobalesTrajet objectAtIndex:indexPath.row] title];
         cell.detailTextLabel.text = [(StatItem *)[infosGlobalesTrajet objectAtIndex:indexPath.row] detail];
         cell.userInteractionEnabled = NO;
-    }else{
+    }else if(indexPath.section == 1){
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
+        cell.textLabel.text = @"Voir le trajet sur la carte";
+        cell.textLabel.font = []
+        cell.userInteractionEnabled = YES;
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    }else if(indexPath.section == 2){
         Trajet *t = (Trajet *) [trajets objectAtIndex:indexPath.row];
         
         
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell2"];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell3"];
         
         cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
         cell.textLabel.text = [Tools dateToFullString:t.dateTrajet];
@@ -154,16 +164,15 @@
     return cell;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSLog(@"%@",segue.identifier);
-}
+
 
 
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == 1 && indexPath.row == 0){
+    if(indexPath.section == 2 && indexPath.row == 0){
+        return NO;
+    }else if(indexPath.section == 1){
         return NO;
     }else{
         return YES;
@@ -206,16 +215,26 @@
 {
     // Navigation logic may go here. Create and push another view controller.
     
-    
-    DetailTrajetViewController *detailViewController = [[DetailTrajetViewController alloc]initWithNibName:@"DetailTrajetViewController" bundle:nil ];
-    
-    [detailViewController setTrajet:(Trajet *)[trajets objectAtIndex:indexPath.row]];
-    
-    
-    [self.navigationController pushViewController:detailViewController animated:YES];
-     
+    if(indexPath.section == 1){        
+        [self performSegueWithIdentifier:@"pushToMap" sender:nil];
+    }else if (indexPath.section == 2){
+        DetailTrajetViewController *detailViewController = [[DetailTrajetViewController alloc]initWithNibName:@"DetailTrajetViewController" bundle:nil ];
+        
+        [detailViewController setTrajet:(Trajet *)[trajets objectAtIndex:indexPath.row]];
+        
+        
+        [self.navigationController pushViewController:detailViewController animated:YES];
+    }
+}
 
-    
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"pushToMap"]){
+        NSLog(@"mok");
+        MapViewController* destViewController = segue.destinationViewController;
+        [destViewController setOldTrajet:trajet];
+        [destViewController setTypeTrajet:[NSNumber numberWithInt:ANCIEN_PARCOURS]];
+    }
 }
 
 @end
