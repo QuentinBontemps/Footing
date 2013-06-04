@@ -23,7 +23,7 @@
 
 -(void)start;
 -(void)save;
-//TEST GIT
+
 -(void)store:(Trajet *) trajet;
 
 -(void)serialize:(int)storeType;
