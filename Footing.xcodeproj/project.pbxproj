@@ -29,7 +29,7 @@
 		8446BE7D17382428000007FB /* GestionFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8446BE7C17382428000007FB /* GestionFile.m */; };
 		845B6367174A657800CFDEA7 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B6366174A657800CFDEA7 /* Tools.m */; };
 		848C7DB1175E7FC9001D5361 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848C7DAF175E7FC9001D5361 /* MainStoryboard.storyboard */; };
-		84955818175646D700A4880A /* StatsTrajetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84955817175646D700A4880A /* StatsTrajetViewController.m */; };
+		848C7DB4175E8114001D5361 /* StatsTrajetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848C7DB3175E8114001D5361 /* StatsTrajetViewController.m */; };
 		84B508801756A350009B0EF5 /* StatsTrajetTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B5087F1756A350009B0EF5 /* StatsTrajetTabViewController.m */; };
 		84B508871756A657009B0EF5 /* GraphsTrajetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B508861756A657009B0EF5 /* GraphsTrajetViewController.m */; };
 		84DB55D61740ED940052B1D9 /* CircuitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB55D51740ED940052B1D9 /* CircuitsViewController.m */; };
@@ -86,8 +86,8 @@
 		84850ADB174A7277002D4070 /* Deplacement.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Deplacement.gpx; sourceTree = "<group>"; };
 		84850ADC174A761B002D4070 /* Laval.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Laval.gpx; sourceTree = "<group>"; };
 		848C7DB0175E7FC9001D5361 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		84955816175646D700A4880A /* StatsTrajetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTrajetViewController.h; sourceTree = "<group>"; };
-		84955817175646D700A4880A /* StatsTrajetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTrajetViewController.m; sourceTree = "<group>"; };
+		848C7DB2175E8114001D5361 /* StatsTrajetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTrajetViewController.h; sourceTree = "<group>"; };
+		848C7DB3175E8114001D5361 /* StatsTrajetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTrajetViewController.m; sourceTree = "<group>"; };
 		84B5087E1756A350009B0EF5 /* StatsTrajetTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTrajetTabViewController.h; sourceTree = "<group>"; };
 		84B5087F1756A350009B0EF5 /* StatsTrajetTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTrajetTabViewController.m; sourceTree = "<group>"; };
 		84B508851756A657009B0EF5 /* GraphsTrajetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphsTrajetViewController.h; sourceTree = "<group>"; };
@@ -196,6 +196,8 @@
 		843511CA171EA52800F2E874 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				848C7DB2175E8114001D5361 /* StatsTrajetViewController.h */,
+				848C7DB3175E8114001D5361 /* StatsTrajetViewController.m */,
 				843511BC171E95AA00F2E874 /* ViewController.h */,
 				843511BD171E95AA00F2E874 /* ViewController.m */,
 				843511CB171EAD6D00F2E874 /* ListeTrajetsViewController.h */,
@@ -210,8 +212,6 @@
 				84DB55E017411FA70052B1D9 /* ParcoursViewController.m */,
 				84F0190D17554E1F00A7A00B /* StatsGlobalesViewController.h */,
 				84F0190E17554E1F00A7A00B /* StatsGlobalesViewController.m */,
-				84955816175646D700A4880A /* StatsTrajetViewController.h */,
-				84955817175646D700A4880A /* StatsTrajetViewController.m */,
 				84B5087E1756A350009B0EF5 /* StatsTrajetTabViewController.h */,
 				84B5087F1756A350009B0EF5 /* StatsTrajetTabViewController.m */,
 				84B508851756A657009B0EF5 /* GraphsTrajetViewController.h */,
@@ -357,10 +357,10 @@
 				8431698A1753EC9D00C5835A /* ListeAncienTrajetsViewController.m in Sources */,
 				84F0190F17554E1F00A7A00B /* StatsGlobalesViewController.m in Sources */,
 				84F019151755570700A7A00B /* StatItem.m in Sources */,
-				84955818175646D700A4880A /* StatsTrajetViewController.m in Sources */,
 				84B508801756A350009B0EF5 /* StatsTrajetTabViewController.m in Sources */,
 				84B508871756A657009B0EF5 /* GraphsTrajetViewController.m in Sources */,
 				84E14313175751FD0038CD8F /* DetailTrajetViewController.m in Sources */,
+				848C7DB4175E8114001D5361 /* StatsTrajetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

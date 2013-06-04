@@ -146,7 +146,7 @@
     }else if(indexPath.section == 1){
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
         cell.textLabel.text = @"Voir le trajet sur la carte";
-        cell.textLabel.font = []
+        
         cell.userInteractionEnabled = YES;
         cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     }else if(indexPath.section == 2){
