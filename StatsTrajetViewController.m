@@ -84,11 +84,6 @@
         
         StatItem *meilleurTempsTours = [[StatItem alloc]initWithTitle:@"Meilleur tour" andDetail:[Tools secondToString:meilleurTempsToursInt]];
         
-        
-        
-        
-        
-        
         [infosGlobalesTrajet addObject:nbToursTotal];
         [infosGlobalesTrajet addObject:meilleurTempsTours];
     }
@@ -230,7 +225,6 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"pushToMap"]){
-        NSLog(@"mok");
         MapViewController* destViewController = segue.destinationViewController;
         [destViewController setOldTrajet:trajet];
         [destViewController setTypeTrajet:[NSNumber numberWithInt:ANCIEN_PARCOURS]];
