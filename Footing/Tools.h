@@ -15,4 +15,16 @@
 +(NSString *)secondToString:(int)temps;
 +(NSString *)meterToString:(int)distance;
 
++(UIColor *)getParcoursColor;
++(UIColor *)getCircuitsColor;
++(UIColor *)getAnciensParcoursColor;
++(UIColor *)getStatsColor;
++(UIColor *)getAccueilColor;
+
++(UIColor *)getParcoursFontColor;
++(UIColor *)getCircuitsFontColor;
++(UIColor *)getAnciensParcoursFontColor;
++(UIColor *)getStatsFontColor;
+
+
 @end

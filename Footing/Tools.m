@@ -53,4 +53,66 @@
     }
 }
 
++(UIColor *)getAccueilColor
+{
+    return [UIColor blackColor];
+}
+
++(UIColor *)getParcoursColor
+{
+    float r = 223;
+    float g = 0;
+    float b = 1;
+    
+    return [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f  alpha:1];
+}
+
++(UIColor *)getCircuitsColor
+{
+    float r = 0;
+    float g = 116;
+    float b = 255;
+    
+    return [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f  alpha:1];
+}
+
++(UIColor *)getAnciensParcoursColor
+{
+    float r = 225;
+    float g = 154;
+    float b = 18;
+    
+    return [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f  alpha:1];
+}
+
++(UIColor *)getStatsColor
+{
+    float r = 71;
+    float g = 0;
+    float b = 130;
+    
+    return [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f  alpha:1];
+}
+
++(UIColor *)getParcoursFontColor
+{
+    return [UIColor whiteColor];
+}
+
++(UIColor *)getCircuitsFontColor
+{
+    return [UIColor whiteColor];
+}
+
++(UIColor *)getAnciensParcoursFontColor
+{
+    return [UIColor whiteColor];
+}
+
++(UIColor *)getStatsFontColor
+{
+    return [UIColor whiteColor];
+}
+
+
 @end

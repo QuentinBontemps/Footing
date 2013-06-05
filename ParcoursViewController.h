@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Constant.h"
+#import "Tools.h"
 
 @interface ParcoursViewController : UIViewController
+
+@property (nonatomic, strong)IBOutlet UIButton *btnNxParcours;
+@property (nonatomic, strong)IBOutlet UIButton *btnListeParcours;
 
 @end

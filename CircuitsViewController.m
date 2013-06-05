@@ -8,11 +8,8 @@
 
 #import "CircuitsViewController.h"
 
-@interface CircuitsViewController ()
-
-@end
-
 @implementation CircuitsViewController
+@synthesize btnNxCircuit,btnListeCircuits;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,10 +20,34 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setTintColor:[Tools getCircuitsColor]];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    [btnNxCircuit setBackgroundColor:[Tools getCircuitsColor]];
+    [btnListeCircuits setBackgroundColor:[Tools getCircuitsColor]];
+    
+    [btnNxCircuit.titleLabel setTextColor:[Tools getCircuitsFontColor]];
+    [btnListeCircuits.titleLabel setTextColor:[Tools getCircuitsFontColor]];
+    
+    
+    [btnNxCircuit.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    [btnListeCircuits.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    
+    
+    [btnNxCircuit.layer setBorderWidth:1];
+    [btnListeCircuits.layer setBorderWidth:1];
+    
+    
+    [btnNxCircuit.layer setCornerRadius:8];
+    [btnListeCircuits.layer setCornerRadius:8];
+    
 }
 
 - (void)didReceiveMemoryWarning

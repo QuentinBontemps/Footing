@@ -336,6 +336,7 @@
         
         btnState = false;
         [btnStartStop setTitle:@"STOP" forState:UIControlStateNormal];
+        [btnStartStop setImage:[UIImage imageNamed:@"stop.png"] forState:UIControlStateNormal];
         [btnPause setEnabled:YES];
     }
 }
@@ -346,6 +347,7 @@
         [timer invalidate];
         [btnPause setEnabled:NO];
         [btnStartStop setTitle:@"START" forState:UIControlStateNormal];
+        [btnStartStop setImage:[UIImage imageNamed:@"start.png"] forState:UIControlStateNormal];
         pausePointLocation = [[CLLocation alloc]initWithLatitude:mapView.userLocation.coordinate.latitude longitude:mapView.userLocation.coordinate.longitude];
         pauseTrajet = true;
         btnState = true;
@@ -356,6 +358,7 @@
             pauseTrajet = false;
             btnState = false;
             [btnStartStop setTitle:@"STOP" forState:UIControlStateNormal];
+            [btnStartStop setImage:[UIImage imageNamed:@"stop.png"] forState:UIControlStateNormal];
             [btnPause setEnabled:YES];
         }else{
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Erreur" message:@"Vous devez être à moins de 5 mètres de l'endroit ou vous avez mis en pause le trajet, pour pouvoir le continuer" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
@@ -384,6 +387,7 @@
     
     btnState = true;
     [btnStartStop setTitle:@"START" forState:UIControlStateNormal];
+    [btnStartStop setImage:[UIImage imageNamed:@"start.png"] forState:UIControlStateNormal];
     [btnPause setEnabled:NO];
     
     if(typeTrajet.integerValue != ANCIEN_PARCOURS){

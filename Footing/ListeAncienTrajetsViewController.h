@@ -10,7 +10,7 @@
 #import "Constant.h"
 
 @interface ListeAncienTrajetsViewController : UITabBarController<UITabBarDelegate>
-{
 
-}
+@property (nonatomic, strong) NSNumber *isStats;
+
 @end

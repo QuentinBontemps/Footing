@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MapViewController.m"
-         timestampString = "392110577.331616"
+         timestampString = "392133865.225562"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "460"
-         endingLineNumber = "460"
+         startingLineNumber = "464"
+         endingLineNumber = "464"
          landmarkName = "-tracerTrajet:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MapViewController.m"
-         timestampString = "392110577.331616"
+         timestampString = "392133865.225562"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "443"
-         endingLineNumber = "443"
+         startingLineNumber = "447"
+         endingLineNumber = "447"
          landmarkName = "-calculDistance:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MapViewController.m"
-         timestampString = "392110577.331616"
+         timestampString = "392133865.225562"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "510"
-         endingLineNumber = "510"
+         startingLineNumber = "514"
+         endingLineNumber = "514"
          landmarkName = "-showNbTours"
          landmarkType = "5">
       </FileBreakpoint>

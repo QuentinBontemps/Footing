@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8431698A1753EC9D00C5835A /* ListeAncienTrajetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843169891753EC9D00C5835A /* ListeAncienTrajetsViewController.m */; };
-		843169971754050C00C5835A /* compass_needle.png in Resources */ = {isa = PBXBuildFile; fileRef = 843169961754050C00C5835A /* compass_needle.png */; };
 		843511A2171E95AA00F2E874 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843511A1171E95AA00F2E874 /* UIKit.framework */; };
 		843511A4171E95AA00F2E874 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843511A3171E95AA00F2E874 /* Foundation.framework */; };
 		843511A6171E95AA00F2E874 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843511A5171E95AA00F2E874 /* CoreGraphics.framework */; };
@@ -18,7 +17,6 @@
 		843511B4171E95AA00F2E874 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 843511B3171E95AA00F2E874 /* Default.png */; };
 		843511B6171E95AA00F2E874 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843511B5171E95AA00F2E874 /* Default@2x.png */; };
 		843511B8171E95AA00F2E874 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843511B7171E95AA00F2E874 /* Default-568h@2x.png */; };
-		843511BB171E95AA00F2E874 /* MainStoryboardO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843511B9171E95AA00F2E874 /* MainStoryboardO.storyboard */; };
 		843511BE171E95AA00F2E874 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843511BD171E95AA00F2E874 /* ViewController.m */; };
 		843511CD171EAD6D00F2E874 /* ListeTrajetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843511CC171EAD6D00F2E874 /* ListeTrajetsViewController.m */; };
 		843511DC171EB73000F2E874 /* Trajet.m in Sources */ = {isa = PBXBuildFile; fileRef = 843511DB171EB73000F2E874 /* Trajet.m */; };
@@ -30,6 +28,10 @@
 		845B6367174A657800CFDEA7 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B6366174A657800CFDEA7 /* Tools.m */; };
 		848C7DB1175E7FC9001D5361 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848C7DAF175E7FC9001D5361 /* MainStoryboard.storyboard */; };
 		848C7DB4175E8114001D5361 /* StatsTrajetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848C7DB3175E8114001D5361 /* StatsTrajetViewController.m */; };
+		84909901175F2D4D0039983C /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84909900175F2D4D0039983C /* StatsViewController.m */; };
+		84A7EEF4175F7AF30023E918 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7EEF1175F7AF30023E918 /* pause.png */; };
+		84A7EEF6175F7AF30023E918 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7EEF3175F7AF30023E918 /* stop.png */; };
+		84A7EEFA175F7BB80023E918 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7EEF9175F7BB80023E918 /* start.png */; };
 		84B508801756A350009B0EF5 /* StatsTrajetTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B5087F1756A350009B0EF5 /* StatsTrajetTabViewController.m */; };
 		84B508871756A657009B0EF5 /* GraphsTrajetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B508861756A657009B0EF5 /* GraphsTrajetViewController.m */; };
 		84DB55D61740ED940052B1D9 /* CircuitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB55D51740ED940052B1D9 /* CircuitsViewController.m */; };
@@ -49,7 +51,6 @@
 /* Begin PBXFileReference section */
 		843169881753EC9D00C5835A /* ListeAncienTrajetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListeAncienTrajetsViewController.h; path = Footing/ListeAncienTrajetsViewController.h; sourceTree = "<group>"; };
 		843169891753EC9D00C5835A /* ListeAncienTrajetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListeAncienTrajetsViewController.m; path = Footing/ListeAncienTrajetsViewController.m; sourceTree = "<group>"; };
-		843169961754050C00C5835A /* compass_needle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass_needle.png; sourceTree = "<group>"; };
 		8435119D171E95AA00F2E874 /* Footing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Footing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843511A1171E95AA00F2E874 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		843511A3171E95AA00F2E874 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,7 +64,6 @@
 		843511B3171E95AA00F2E874 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		843511B5171E95AA00F2E874 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		843511B7171E95AA00F2E874 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		843511BA171E95AA00F2E874 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboardO.storyboard; sourceTree = "<group>"; };
 		843511BC171E95AA00F2E874 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Footing/ViewController.h; sourceTree = "<group>"; };
 		843511BD171E95AA00F2E874 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Footing/ViewController.m; sourceTree = "<group>"; };
 		843511CB171EAD6D00F2E874 /* ListeTrajetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListeTrajetsViewController.h; path = Footing/ListeTrajetsViewController.h; sourceTree = "<group>"; };
@@ -88,6 +88,11 @@
 		848C7DB0175E7FC9001D5361 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		848C7DB2175E8114001D5361 /* StatsTrajetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTrajetViewController.h; sourceTree = "<group>"; };
 		848C7DB3175E8114001D5361 /* StatsTrajetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTrajetViewController.m; sourceTree = "<group>"; };
+		849098FF175F2D4D0039983C /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsViewController.h; path = Footing/StatsViewController.h; sourceTree = "<group>"; };
+		84909900175F2D4D0039983C /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatsViewController.m; path = Footing/StatsViewController.m; sourceTree = "<group>"; };
+		84A7EEF1175F7AF30023E918 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		84A7EEF3175F7AF30023E918 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		84A7EEF9175F7BB80023E918 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		84B5087E1756A350009B0EF5 /* StatsTrajetTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTrajetTabViewController.h; sourceTree = "<group>"; };
 		84B5087F1756A350009B0EF5 /* StatsTrajetTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTrajetTabViewController.m; sourceTree = "<group>"; };
 		84B508851756A657009B0EF5 /* GraphsTrajetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphsTrajetViewController.h; sourceTree = "<group>"; };
@@ -134,7 +139,6 @@
 		84351192171E95A900F2E874 = {
 			isa = PBXGroup;
 			children = (
-				843169961754050C00C5835A /* compass_needle.png */,
 				84850ADC174A761B002D4070 /* Laval.gpx */,
 				84850ADB174A7277002D4070 /* Deplacement.gpx */,
 				843511A7171E95AA00F2E874 /* Footing */,
@@ -166,6 +170,7 @@
 		843511A7171E95AA00F2E874 /* Footing */ = {
 			isa = PBXGroup;
 			children = (
+				84A7EEF0175F7ACA0023E918 /* Image */,
 				84E839561746360500D5F82F /* Map */,
 				843511D9171EB71D00F2E874 /* Model */,
 				84ED339517202299007FC348 /* Others */,
@@ -173,7 +178,6 @@
 				843511B0171E95AA00F2E874 /* AppDelegate.h */,
 				843511B1171E95AA00F2E874 /* AppDelegate.m */,
 				848C7DAF175E7FC9001D5361 /* MainStoryboard.storyboard */,
-				843511B9171E95AA00F2E874 /* MainStoryboardO.storyboard */,
 				843511A8171E95AA00F2E874 /* Supporting Files */,
 			);
 			path = Footing;
@@ -219,6 +223,8 @@
 				84E14310175751FD0038CD8F /* DetailTrajetViewController.h */,
 				84E14311175751FD0038CD8F /* DetailTrajetViewController.m */,
 				84E14312175751FD0038CD8F /* DetailTrajetViewController.xib */,
+				849098FF175F2D4D0039983C /* StatsViewController.h */,
+				84909900175F2D4D0039983C /* StatsViewController.m */,
 			);
 			name = ViewController;
 			path = ..;
@@ -237,6 +243,16 @@
 				84ED338D171FF938007FC348 /* Etape.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		84A7EEF0175F7ACA0023E918 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				84A7EEF9175F7BB80023E918 /* start.png */,
+				84A7EEF1175F7AF30023E918 /* pause.png */,
+				84A7EEF3175F7AF30023E918 /* stop.png */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 		84E839561746360500D5F82F /* Map */ = {
@@ -323,10 +339,11 @@
 				843511B4171E95AA00F2E874 /* Default.png in Resources */,
 				843511B6171E95AA00F2E874 /* Default@2x.png in Resources */,
 				843511B8171E95AA00F2E874 /* Default-568h@2x.png in Resources */,
-				843511BB171E95AA00F2E874 /* MainStoryboardO.storyboard in Resources */,
-				843169971754050C00C5835A /* compass_needle.png in Resources */,
 				84E14314175751FD0038CD8F /* DetailTrajetViewController.xib in Resources */,
 				848C7DB1175E7FC9001D5361 /* MainStoryboard.storyboard in Resources */,
+				84A7EEF4175F7AF30023E918 /* pause.png in Resources */,
+				84A7EEF6175F7AF30023E918 /* stop.png in Resources */,
+				84A7EEFA175F7BB80023E918 /* start.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +378,7 @@
 				84B508871756A657009B0EF5 /* GraphsTrajetViewController.m in Sources */,
 				84E14313175751FD0038CD8F /* DetailTrajetViewController.m in Sources */,
 				848C7DB4175E8114001D5361 /* StatsTrajetViewController.m in Sources */,
+				84909901175F2D4D0039983C /* StatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,14 +391,6 @@
 				843511AB171E95AA00F2E874 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		843511B9171E95AA00F2E874 /* MainStoryboardO.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				843511BA171E95AA00F2E874 /* en */,
-			);
-			name = MainStoryboardO.storyboard;
 			sourceTree = "<group>";
 		};
 		848C7DAF175E7FC9001D5361 /* MainStoryboard.storyboard */ = {

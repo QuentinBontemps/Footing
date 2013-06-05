@@ -14,6 +14,7 @@
 @end
 
 @implementation ListeAncienTrajetsViewController
+@synthesize isStats;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,6 +23,20 @@
         
     }
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if(isStats.boolValue){
+        [self.navigationController.navigationBar setTintColor:[Tools getStatsColor]];
+        [self.tabBar setTintColor:[Tools getStatsColor]];
+    }else{
+        [self.navigationController.navigationBar setTintColor:[Tools getAnciensParcoursColor]];
+        [self.tabBar setTintColor:[Tools getAnciensParcoursColor]];
+
+    }
 }
 
 - (void)viewDidLoad
@@ -34,6 +49,8 @@
    
     ListeTrajetsViewController *l2 = [self.viewControllers objectAtIndex:1];
     [l2 setTypeTrajet:[NSNumber numberWithInt:CIRCUITS_STORE]];
+    
+    
  }
 
 
@@ -41,5 +58,7 @@
 {
     [super didReceiveMemoryWarning];
 }
+
+
 
 @end

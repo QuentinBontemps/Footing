@@ -10,8 +10,12 @@
 #import "ListeTrajetsViewController.h"
 #import "MapViewController.h"
 #import "Constant.h"
+#import "Tools.h"
 
 
 @interface CircuitsViewController : UIViewController
+
+@property (nonatomic, strong)IBOutlet UIButton *btnNxCircuit;
+@property (nonatomic, strong)IBOutlet UIButton *btnListeCircuits;
 
 @end

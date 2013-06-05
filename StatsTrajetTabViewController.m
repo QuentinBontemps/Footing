@@ -26,6 +26,12 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setTintColor:[Tools getStatsColor]];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
