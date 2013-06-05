@@ -285,6 +285,7 @@
     }
     
     if(isOk){
+        self.navigationItem.hidesBackButton = YES;
         NSDate *date = [NSDate new];
         
         switch (typeTrajet.integerValue) {
@@ -403,12 +404,12 @@
         txtNameAlert.keyboardAppearance = UIKeyboardAppearanceAlert;
         
         [alert show];
+        self.navigationItem.hidesBackButton = NO;
     }else{
         if(oldTrajet != nil){
-            if(nbCheckpointsOk >= oldTrajet.checkpoints.count){
-                
-            
+            if(nbCheckpointsOk >= oldTrajet.checkpoints.count){            
                 [cache addTrajet:oldTrajet addTrajet:trajet];
+                self.navigationItem.hidesBackButton = NO;
                 NSLog(@"Trajet ajouté");
             }else{
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Erreur" message:@"Vous n'êtes pas passé par tous les checkpoints\nImpossible d'enregistrer ce nouveau trajet" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
