@@ -8,7 +8,6 @@
 
 #import "StatsTrajetTabViewController.h"
 #import "StatsTrajetViewController.h"
-#import "GraphsTrajetViewController.h"
 
 @interface StatsTrajetTabViewController ()
 
@@ -38,9 +37,7 @@
 	
     StatsTrajetViewController *view = (StatsTrajetViewController *)[self.viewControllers objectAtIndex:0];
     [view setTrajet:trajet];
-    
-    GraphsTrajetViewController *view2 = (GraphsTrajetViewController *)[self.viewControllers objectAtIndex:1];
-    [view2 setTrajet:trajet];
+
 }
 
 - (void)didReceiveMemoryWarning

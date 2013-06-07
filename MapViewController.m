@@ -538,11 +538,14 @@
         [cache store:trajet];
         trajet= nil;
         [self.navigationController popToRootViewControllerAnimated:YES];
+
     }else{
         if(![txtNameAlert.text isEqualToString:@""]){
             if(![cache trajetNameExist:txtNameAlert.text]){
                 [trajet setNom:txtNameAlert.text];
                 [cache store:trajet];
+                [self.navigationController popToRootViewControllerAnimated:YES];
+                NSLog(@"Trajet ajouté");
                 trajet= nil;
             }else{
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Nouveau trajet"
@@ -566,6 +569,8 @@
         }else{
             [trajet setNom:[Tools dateToFullString:trajet.dateTrajet]];
             [cache store:trajet];
+            NSLog(@"Trajet ajouté");
+            
             trajet= nil;
             [self.navigationController popToRootViewControllerAnimated:YES];
         }

@@ -451,7 +451,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OK6-rd-oU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3034" y="413"/>
+            <point key="canvasLocation" x="-2962" y="341"/>
         </scene>
         <!--Liste Trajets View Controller - Parcours-->
         <scene sceneID="RPm-Bt-fMV">
@@ -775,62 +775,6 @@
         <image name="pause.png" width="71" height="108"/>
         <image name="start.png" width="108" height="109"/>
     </resources>
-    <classes>
-        <class className="CircuitsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CircuitsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="btnListeCircuits" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnNxCircuit" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="ListeAncienTrajetsViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListeAncienTrajetsViewController.h"/>
-        </class>
-        <class className="ListeTrajetsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListeTrajetsViewController.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btnPauseOnClick:"/>
-                <relationship kind="action" name="btnStartStopOnClick:"/>
-                <relationship kind="outlet" name="btnPause" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnStartStop" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="lblDistance" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblTempsEcoule" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="ParcoursViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParcoursViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="btnListeParcours" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnNxParcours" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="StatsGlobalesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatsGlobalesViewController.h"/>
-        </class>
-        <class className="StatsTrajetViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatsTrajetViewController.h"/>
-        </class>
-        <class className="StatsViewController" superclassName="ViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="btnGlobales" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnTrajet" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="btnAnciensParcours" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnCircuits" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnParcours" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnStats" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

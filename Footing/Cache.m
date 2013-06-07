@@ -154,9 +154,17 @@ static Cache *_instance = nil;
 -(void)removeTrajet:(Trajet *)trajet
 {
     if([trajet isKindOfClass:[Parcours class]]){
+        NSLog(@"nb item before : %i",parcoursStore.count);
         [parcoursStore removeObject:trajet];
+        NSLog(@"Trajet supprimé");
+        NSLog(@"nb item after : %i",parcoursStore.count);
     }else if([trajet isKindOfClass:[Circuit class]]){
+        
+        NSLog(@"nb item before : %i",circuitsStore.count);
         [circuitsStore removeObject:trajet];
+        NSLog(@"Trajet supprimé");
+        
+        NSLog(@"nb item after : %i",circuitsStore.count);
     }
 }
 

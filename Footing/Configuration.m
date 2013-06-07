@@ -45,8 +45,11 @@ static Configuration *_instance = nil;
     
     NSLog(@"Configuration : start");
     
+    [self put:@"app.initialized" item:no];
+    [self put:@"app" item:@"debut"];
+    
+    
     // Cache ----------------------------------------------------------------
-    [self put:@"cache.enabled" item:yes];
     [self put:@"cache.parcours.filename" item:@"footingCache_parcours.txt"];
     [self put:@"cache.circuits.filename" item:@"footingCache_circuit.txt"];
 }
@@ -60,12 +63,7 @@ static Configuration *_instance = nil;
 {
     return [[items objectForKey:key]boolValue];
 }
-     
--(float)getFloat:(NSString *)key
-{
-    return [[items objectForKey:key]floatValue];
-}
-     
+          
 -(NSString *)getString:(NSString *)key
 {
     return [items objectForKey:key];

@@ -24,14 +24,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     configuration = [Configuration instance];
     cache = [Cache instance];
     
-    NSInvocationOperation *operation = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(configureApp) object:nil];
-    
-    [[[AppDelegate new] queue]addOperation:operation];
-    
+    NSLog(@"%@",[configuration getString:@"app"]);
+    if(![configuration getBoolean:@"app.initialized"]){
+        NSInvocationOperation *operation = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(configureApp) object:nil];
+        
+        [[[AppDelegate new] queue]addOperation:operation];
+    }
+        
     [btnParcours setBackgroundColor:[Tools getParcoursColor]];
     [btnCircuits setBackgroundColor:[Tools getCircuitsColor]];
     [btnAnciensParcours setBackgroundColor:[Tools getAnciensParcoursColor]];
@@ -67,8 +70,10 @@
 
 -(void) configureApp
 {
+    NSLog(@"configureApp");
     [configuration start];
     [cache start];
+    [configuration put:@"app.initialized" item:[NSNumber numberWithBool:YES]];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
