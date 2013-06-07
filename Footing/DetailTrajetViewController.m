@@ -24,10 +24,10 @@
     [super viewDidLoad];
     
     infosTrajet = [[NSMutableArray alloc]init];
-    
-    StatItem *date = [[StatItem alloc]initWithTitle:@"Date" andDetail:[Tools dateToFullString:trajet.dateTrajet]];
+        StatItem *date = [[StatItem alloc]initWithTitle:@"Date" andDetail:[Tools dateToFullString:trajet.dateTrajet]];
     StatItem *distance = [[StatItem alloc]initWithTitle:@"Distance" andDetail:[Tools distanceToString:trajet.distance]];
     StatItem *temps = [[StatItem alloc]initWithTitle:@"Temps" andDetail:[Tools secondToString:trajet.tempsTrajet.integerValue]];
+    
     
     [infosTrajet addObject:date];
     [infosTrajet addObject:distance];
@@ -52,10 +52,21 @@
         [infosTrajet addObject:nbTours];
         [infosTrajet addObject:moyenneInt];        
     }else if([trajet isKindOfClass:[Parcours class]]){
+               
         
         
     }
     
+    float distanceKm = trajet.distance.floatValue / 1000;
+    float tempsHeure = trajet.tempsTrajet.floatValue / 3600;
+    
+    float vitesseMoyenne = distanceKm / tempsHeure;
+    
+    
+    
+    StatItem *vitesseMoyenneItem = [[StatItem alloc]initWithTitle:@"Vitesse moyenne" andDetail:[NSString stringWithFormat:@"%.02f KM/H",vitesseMoyenne]];
+    
+    [infosTrajet addObject:vitesseMoyenneItem];
     
     
     NSLog(@"nbInfos : %i",infosTrajet.count);
